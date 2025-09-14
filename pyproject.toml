@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "structure-gen"
+version = "0.1.0"
+description = "Create a directory/file tree from a simple indented text file."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+  { name = "Michael Gavalas", email = "mgavalas23@gmail.com" }
+]
+keywords = ["scaffold", "filesystem", "bootstrap", "generator"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Environment :: Console",
+]
+
+[project.scripts]
+structure-gen = "src.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src"]
